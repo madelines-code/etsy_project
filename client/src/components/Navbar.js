@@ -39,6 +39,14 @@ class Navbar extends Component {
             Home
           </Menu.Item>
       </Link>
+      <Link to="/shops">
+        <Menu.Item
+            name='shops'
+            active={activeItem === 'shops'}
+            onClick={this.handleItemClick} >
+            Shops
+          </Menu.Item>
+      </Link>
       <Link to="/protected">
           <Menu.Item
             name='protected'

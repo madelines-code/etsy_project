@@ -8,12 +8,14 @@ import { Container, } from "semantic-ui-react";
 import RequireAuth from './components/RequireAuth';
 import Layout from './components/Layout';
 import AuthProvider from './providers/AuthProvider';
+import ProductsBySeller from './Pages/ProductsBySeller';
 
 function App() {
   return (
       <Routes>
         <Route element={<Layout/>}>
           <Route path="/" element= {<Home/>}/>
+          <Route path="/shops" element= {<ProductsBySeller/>}/>
           <Route path="/login" element= {<Login/>}/>
           <Route path="/register" element= {<Register/>}/>
           <Route element={<RequireAuth />}>
