@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Label, Table } from 'semantic-ui-react';
+import { Table } from 'semantic-ui-react';
 
 const ProductsBySeller = () => {
   const [sellerProducts, setSellerProducts] = useState([]);
@@ -49,8 +49,8 @@ const ProductsBySeller = () => {
         return (
           <Table.Row>
             <Table.Cell>{pr.product}</Table.Cell>
-            <Table.Cell>{pr.description}</Table.Cell>
             <Table.Cell>{pr.price}</Table.Cell>
+            <Table.Cell>{pr.description}</Table.Cell> 
           </Table.Row>)}
       ))}
     return sellerProducts.map((p)=>{
@@ -61,9 +61,9 @@ const ProductsBySeller = () => {
         <Table celled>
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell>Product</Table.HeaderCell>
-              <Table.HeaderCell>Price</Table.HeaderCell>
-              <Table.HeaderCell>Description</Table.HeaderCell>
+              <Table.HeaderCell width={6}>Product</Table.HeaderCell>
+              <Table.HeaderCell width={2}>Price</Table.HeaderCell>
+              <Table.HeaderCell width={8}>Description</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
 
@@ -73,20 +73,6 @@ const ProductsBySeller = () => {
           )
         })
       }
-        
-        
-      
-      
-/* <Table.Row>
-<Table.Cell>Cell</Table.Cell>
-<Table.Cell>Cell</Table.Cell>
-<Table.Cell>Cell</Table.Cell>
-</Table.Row>
-<Table.Row>
-<Table.Cell>Cell</Table.Cell>
-<Table.Cell>Cell</Table.Cell>
-<Table.Cell>Cell</Table.Cell>
-</Table.Row> */
 
   return (
     <div>

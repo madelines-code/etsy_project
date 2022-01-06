@@ -32,6 +32,9 @@ const Layout = () => {
           <Link to="/shops">Shops</Link>
         </div>
         <div>
+          <Link to="/categories">Products By Category</Link>
+        </div>
+        <div>
           <Link to="/protected">Protected</Link>
         </div>
         {renderAuthLinks()}

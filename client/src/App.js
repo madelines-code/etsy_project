@@ -9,6 +9,7 @@ import RequireAuth from './components/RequireAuth';
 import Layout from './components/Layout';
 import AuthProvider from './providers/AuthProvider';
 import ProductsBySeller from './Pages/ProductsBySeller';
+import ProductsByCategory from './Pages/ProductsByCategory';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route element={<Layout/>}>
           <Route path="/" element= {<Home/>}/>
           <Route path="/shops" element= {<ProductsBySeller/>}/>
+          <Route path="/categories" element= {<ProductsByCategory/>}/>
           <Route path="/login" element= {<Login/>}/>
           <Route path="/register" element= {<Register/>}/>
           <Route element={<RequireAuth />}>
