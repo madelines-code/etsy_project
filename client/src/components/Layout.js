@@ -7,37 +7,34 @@ const Layout = () => {
   let x = useNavigate();
 
   const { authenticated, handleLogout } = useContext(AuthContext);
-  const renderAuthLinks = () => {
-    if (authenticated) {
-      return <button onClick={() => handleLogout(x)}>Logout</button>;
-    }
-    return (
-      <>
-        <div>
-          <Link to="/register">Register</Link>
-        </div>
-        <div>
-          <Link to="/login">Login</Link>
-        </div>
-      </>
-    );
-  };
+  // const renderAuthLinks = () => {
+  //   if (authenticated) {
+  //     return <button style={styles.button} onClick={() => handleLogout(x)}>Logout</button>;
+  //   }
+  //   return (
+  //     <>
+  //       <div>
+  //         <Link to="/register">Register</Link>
+  //       </div>
+  //       <div>
+  //         <Link to="/login">Login</Link>
+  //       </div>
+  //     </>
+  //   );
+  // };
   return (
     <div>
       <div style={styles.navbar}>
-        <div>
-          <Link to="/">Home</Link>
+      <div>
+          <Link style={styles.navbarText} to="/search">Search Products</Link>
         </div>
         <div>
-          <Link to="/shops">Shops</Link>
+          <Link style={styles.navbarText} to="/shops">Shops</Link>
         </div>
         <div>
-          <Link to="/categories">Products By Category</Link>
+          <Link style={styles.navbarText} to="/categories">Products By Category</Link>
         </div>
-        <div>
-          <Link to="/protected">Protected</Link>
-        </div>
-        {renderAuthLinks()}
+        {/* {renderAuthLinks()} */}
       </div>
       <div style={styles.pageContainer}>
         <Outlet />
@@ -45,6 +42,7 @@ const Layout = () => {
     </div>
   );
 };
+
 
 const styles={
   content: {
@@ -58,7 +56,20 @@ const styles={
   },
     navbar: {
       display: "flex",
-      border: "1px solid",
+      backgroundColor: "white",
+      justifyContent: 'center',
+      padding: '20px',
+    },
+    navbarText: {
+      textDecoration: 'none',
+      color: 'black',
+      margin: '10px',
+      fontSize: '20px',
+    },
+    button: {
+      border: '0px',
+      backgroundColor: 'white',
+      fontSize: '20px',
     },
 };
 

@@ -10,6 +10,7 @@ import Layout from './components/Layout';
 import AuthProvider from './providers/AuthProvider';
 import ProductsBySeller from './Pages/ProductsBySeller';
 import ProductsByCategory from './Pages/ProductsByCategory';
+import SearchProducts from './Pages/SearchProducts';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element= {<Home/>}/>
           <Route path="/shops" element= {<ProductsBySeller/>}/>
           <Route path="/categories" element= {<ProductsByCategory/>}/>
+          <Route path="/search" element= {<SearchProducts/>}/>
           <Route path="/login" element= {<Login/>}/>
           <Route path="/register" element= {<Register/>}/>
           <Route element={<RequireAuth />}>

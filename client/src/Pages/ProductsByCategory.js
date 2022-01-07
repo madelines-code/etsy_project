@@ -26,25 +26,6 @@ const normalizeCategories = (data) => {
   return categoriesObjectArray;
 };
 
-
-  // const mapProductCategory = () => {
-  //   return catProducts.filter((p)=>{
-  //     if (category == p.category){
-  //       setUser(user);
-  //       setFirst_name(user.first_name)
-  //       setLast_name(user.last_name)
-  //       setGender(user.gender)
-  //       setAge(user.age)
-  //     } else {
-  //       setUser("");
-  //       setFirst_name("")
-  //       setLast_name("")
-  //       setGender("");
-  //       setAge("");
-  //     }
-  //   })
-  // }
-
   const normalizeProducts = (data) => {
     let categories = data.map((t) => t.category);
     let uniqueCategories = [...new Set(categories)];
@@ -105,36 +86,6 @@ const normalizeCategories = (data) => {
         )
       }
     })
-  //  const renderProducts = (p) => {
-  //    console.log(p)
-  //     let products = p.products
-  //     return (products.map((pr)=> {
-  //       return (
-  //         <Table.Row>
-  //           <Table.Cell>{pr.product}</Table.Cell>
-  //           <Table.Cell>{pr.price}</Table.Cell>
-  //           <Table.Cell>{pr.description}</Table.Cell> 
-  //         </Table.Row>)}
-  //     ))}
-  //   return catProducts.map((p)=>{
-  //     return (
-  //       <>
-  //       <h2>{p.category}</h2>
-
-  //       <Table celled>
-  //         <Table.Header>
-  //           <Table.Row>
-  //             <Table.HeaderCell width={6}>Product</Table.HeaderCell>
-  //             <Table.HeaderCell width={2}>Price</Table.HeaderCell>
-  //             <Table.HeaderCell width={8}>Description</Table.HeaderCell>
-  //           </Table.Row>
-  //         </Table.Header>
-
-  //           {renderProducts(p)}
-  //           </Table>
-  //           </>
-  //         )
-  //       })
       }
         
 
